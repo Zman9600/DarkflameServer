@@ -1202,7 +1202,7 @@ PetComponent::~PetComponent()
 }
 
 void PetComponent::SetPetNameForModeration(const std::string& petName) {
-    int approved = 1; //default, in mod
+    int approved = 2; //default, in mod
 
     //Make sure that the name isn't already auto-approved:
     if (Game::chatFilter->IsSentenceOkay(petName, 0)) {
