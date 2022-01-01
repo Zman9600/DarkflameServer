@@ -559,7 +559,7 @@ void PropertyManagementComponent::UpdateApprovedStatus(const bool value)
 	
 	auto* update = Database::CreatePreppedStmt("UPDATE properties SET mod_approved = ? WHERE id = ?;");
 
-	update->setBoolean(1, value);
+	update->setBoolean(1, true);
 	update->setInt64(2, propertyId);
 
 	update->executeUpdate();
